@@ -2,12 +2,12 @@ const header = document.querySelector('.header');
 // const headerHeight = header.getBoundingClientRect().height
 
 document.querySelectorAll('.nav li a').forEach(elem=>elem.addEventListener('click', e => {
-        e.preventDefault()
-        const id = e.target.getAttribute('href');
-        document.querySelector(id).scrollIntoView({ behavior: 'smooth' })
+    e.preventDefault()
+    const id = e.target.getAttribute('href');
+    document.querySelector(id).scrollIntoView({ behavior: 'smooth' })
 }))
 
-gsap.registerPlugin(ScrollTrigger);
+// gsap.registerPlugin(ScrollTrigger);
 
 // const bgToAnimate = [{selector: '.up', position: -350},
 //     { selector: '.down', position: 160},
@@ -31,7 +31,7 @@ function mainAnimation() {
 
     var
         containerHeight = Math.round(document.querySelector('.header').getBoundingClientRect().height)
-        - Math.round(document.querySelector('nav').getBoundingClientRect().height),
+            - Math.round(document.querySelector('nav').getBoundingClientRect().height),
         scrollOffset,
         scrollPercent,
         toScroll = [
@@ -96,7 +96,7 @@ function mainAnimation() {
 
 document.addEventListener('DOMContentLoaded', mainAnimation);
 
-window.onload = typingEffect;
+// window.onload = typingEffect;
 
 function typingEffect() {
     let intervalId;
@@ -132,17 +132,17 @@ const startType = () => {
 
 
 
-gsap.to('.sticky', {
-    y: 0,
-    opacity: 1,
-    duration: 1,
-    scrollTrigger: {
-        trigger: '.header .wrapper',
-        start: "bottom 20%",
-        end: 'bottom 20%',
-        toggleActions: "play none none reverse"
-    }
-});
+// gsap.to('.sticky', {
+//     y: 0,
+//     opacity: 1,
+//     duration: 1,
+//     scrollTrigger: {
+//         trigger: '.header .wrapper',
+//         start: "bottom 20%",
+//         end: 'bottom 20%',
+//         toggleActions: "play none none reverse"
+//     }
+// });
 
 
 const elementsToAnimate = [
@@ -160,20 +160,20 @@ const elementsToAnimate = [
     {selector: '.contact-us .paragraph', trigger: '.contact-us', position: 'top 60%', effect: 'circ'},
 ]
 
-elementsToAnimate.forEach(el => gsap.to(el.selector, {
-    y: 0,
-    opacity: 1,
-    duration: 0.7,
-    ease: el.effect,
-    repeat: 0,
-    scrollTrigger: {
-        // markers: true,
-        trigger: el.trigger,
-        start: el.position,
-        end: 'top -30%',
-        toggleActions: "restart reverse play reverse",
-    }
-}));
+// elementsToAnimate.forEach(el => gsap.to(el.selector, {
+//     y: 0,
+//     opacity: 1,
+//     duration: 0.7,
+//     ease: el.effect,
+//     repeat: 0,
+//     scrollTrigger: {
+//         // markers: true,
+//         trigger: el.trigger,
+//         start: el.position,
+//         end: 'top -30%',
+//         toggleActions: "restart reverse play reverse",
+//     }
+// }));
 
 const swiper = new Swiper('.swiper', {
     loop: true,
