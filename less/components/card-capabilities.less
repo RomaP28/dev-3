@@ -1,0 +1,101 @@
+.cap-card{
+    width: 30rem;
+    height: 20rem;
+    border-radius: 2rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-color: rgba(193, 199, 201, 0.3);
+    transition: all 1s ease-in-out;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+
+    &:hover {
+      .img {
+        opacity: 0;
+      }
+      .blur {
+        opacity: 1;
+      }
+    }
+
+    .bg{
+      position: absolute;
+      width:100%;
+      height: 100%;
+      transition: opacity .6s ease-out;
+      -webkit-filter: blur(6px);
+      filter: blur(6px);
+      img {
+        //width: 100%;
+        width: 30rem;
+        height: 20rem;
+        }
+      }
+
+    .blur {
+      background: linear-gradient(
+              90.84deg,
+              rgba(159, 131, 214, 0.5) 19.94%,
+              rgba(190, 149, 203, 0.5) 73.55%,
+              rgba(174, 112, 176, 0.5) 107.91%),
+              @color-white;
+      border-radius: 2rem;
+      position: absolute;
+      width:100%;
+      height: 100%;
+      z-index: 2;
+      transition: opacity .6s ease-out;
+      opacity: 0;
+    }
+
+    .top{
+      display: flex;
+      justify-content: space-between;
+
+      & > img{
+        width: 3rem;
+        height: 3rem;
+      }
+      .webflow{
+        width: 3rem;
+        height: 1.8rem;
+      }
+    }
+
+    .bottom{
+      text-align: left;
+      color: @color-white;
+      h2{
+        font-weight: 600;
+        font-size: @big-font-size;
+        line-height: 2.8rem;
+        letter-spacing: 0.07em;
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+      }
+
+      p{
+        font-weight: 400;
+        font-size: @small-font-size;
+        line-height: 2rem;
+        letter-spacing: 0.03em;
+        opacity: 0.7;
+      }
+    }
+
+
+  .inner{
+    z-index: 3;
+    position: absolute;
+    width:100%;
+    height: 100%;
+    background: rgba(193, 199, 201, 0.3);
+    border-radius: 2rem;
+    padding: 3rem 2.4rem 2.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: background .5s ease-out;
+  }
+}

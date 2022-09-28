@@ -1,0 +1,37 @@
+.moving_bg{
+  z-index: 0;
+  width: 140%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 10rem;
+  transform: translate(-22rem, -16rem) rotate(-30deg);
+
+  div {
+    display: block;
+    text-align: center;
+    &.up {
+      //transform: translateX(5rem) translateY(-250px);
+      transform: translateY(-250px);
+    }
+    &.down {
+      transform: translateY(-110px);
+    }
+    &.down2 {
+      transform: translateY(150px);
+    }
+  }
+  img{
+    width: 47.5rem;
+    height: 25.7rem;
+    margin: 0 0 7rem 0;
+    //width: calc(100vw / 3.37);
+    @media(min-width: 1601px){
+      width: calc(100vw / 3.37);
+      height: auto;
+    }
+  }
+}
+
+
+

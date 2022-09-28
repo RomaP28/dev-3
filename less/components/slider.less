@@ -1,0 +1,98 @@
+.swiper {
+  width: 100%;
+  height: auto;
+
+  .top{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 12rem;
+  }
+
+  .bracket {
+    width: 6.5rem;
+    height: 5rem;
+    &-top {
+      margin-top: -6rem;
+    }
+
+    &-bottom {
+      margin-bottom: -6rem;
+    }
+  }
+
+ .review {
+   font-weight: 600;
+   font-size: @big-font-size;
+   line-height: 28px;
+   letter-spacing: 0.07em;
+ }
+
+  .user {
+    margin: @u-margin-top-medium auto 0;
+    max-width: 13rem;
+    padding-top: 2rem;
+    border: 8px solid @color-tertiary-purple;
+    border-radius: 50%;
+    background: #FFFFFF;
+    box-shadow: 0 0 20px rgba(243, 75, 75, 0.1);
+    overflow: hidden;
+    text-align: center;
+    object-fit: cover;
+  }
+
+  .user-image {
+    display: block;
+    //max-width: 100%;
+    //height: auto;
+    width: 133px;
+    height: 113px;
+  }
+
+  .user-name {
+    margin-top: 1rem;
+  }
+
+  &-pagination {
+    margin-top: @u-margin-top-medium;
+    position: initial;
+    &-bullet {
+      width:  42px;
+      height: 42px;
+      border: 6px solid @color-white;
+      //transition: border .1s ease-out;
+      opacity: unset;
+      &-active {
+        border: 6px solid @color-tertiary-purple;
+      }
+
+      &:not(.swiper-pagination-bullet-active):hover {
+        border: 6px solid #E3E3E3;
+      }
+
+    }
+
+    & span {
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: 32px 32px;
+    }
+
+    & span:nth-child(1){
+      background-image: url(../img/reviews/user1.webp);
+    }
+    & span:nth-child(2){
+      background-image: url(../img/reviews/user2.webp);
+    }
+    & span:nth-child(3){
+      background-image: url(../img/reviews/user3.webp);
+    }
+    & span:nth-child(4){
+      background-image: url(../img/reviews/user4.webp);
+    }
+    & span:nth-child(5){
+      background-image: url(../img/reviews/user5.webp);
+    }
+  }
+}
