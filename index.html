@@ -10,17 +10,19 @@
   <link rel="stylesheet" href="libs/swiper-bundle.min.css">
   <script src="libs/swiper-bundle.min.js"></script>
 
-<!--  <script src="libs/gsap.min.js"></script>-->
+  <script src="libs/gsap.min.js"></script>
   <script src="libs/ScrollTrigger.min.js"></script>
-  <script src="libs/TextPlugin.min.js"></script>
-  <script src="libs/EasePack.min.js"></script>
+<!--  <script src="libs/TextPlugin.min.js"></script>-->
+<!--  <script src="libs/EasePack.min.js"></script>-->
+
+  <script src="libs/locomotive/locomotive-scroll.min.js"></script>
+  <link rel="stylesheet" href="libs/locomotive/locomotive-scroll.css">
 
   <link rel="stylesheet" href="less/style.css">
 </head>
 
-<body>
-
-  <header class="header">
+<body data-scroll-container>
+  <header class="header" data-scroll-section>
     <nav class="nav">
         <div class="container">
             <a class="logo" href="/"><img src="img/icons/logo.svg" alt="dev-3.agency"></a>
@@ -73,25 +75,26 @@
     </div>
 
     <div class="moving_bg">
-      <div class="up">
+      <div class="up" data-scroll data-scroll-speed="-1">
         <img src="img/header/image371x.webp"  alt="Page image">
         <img src="img/header/image11.webp" alt="Page image">
         <img src="img/header/image421x.webp" alt="Page image">
       </div>
-      <div class="down">
+      <div class="down" data-scroll data-scroll-speed="1">
         <img src="img/header/image401x.webp" alt="Page image">
         <img src="img/header/image10.webp" alt="Page image">
         <img src="img/header/image17.webp" alt="Page image">
         <img src="img/header/image14.webp" alt="Page image">
         <img src="img/header/image15.webp" alt="Page image">
       </div>
-      <div class="up2">
+      <div class="up2" data-scroll data-scroll-speed="-1">
         <img src="img/header/image9.webp" alt="Page image">
         <img src="img/header/image13.webp" alt="Page image">
         <img src="img/header/image20.webp" alt="Page image">
         <img src="img/header/image12.webp" alt="Page image">
+        <img src="img/header/image371x.webp"  alt="Page image">
       </div>
-      <div class="down2">
+      <div class="down2" data-scroll data-scroll-speed="1">
         <img src="img/header/image18.webp"  alt="Page image">
         <img src="img/header/image391x.webp"  alt="Page image">
 <!--        <img src="img/header/image19.webp" srcset="img/header/image19.webp 2x, img/header/image19x2.webp 3x" alt="Page image">-->
@@ -103,7 +106,7 @@
   <main>
     <section id="work" class="work">
       <div class="container">
-        <h2 class="h-primary">Our impressive work</h2>
+        <h2 class="h-primary" data-scroll data-scroll-speed="-1" data-scroll-direction="horizontal">Our impressive work</h2>
         <div class="card-container u-margin-top-big">
           <div class="work-card">
             <div class="card-1">
@@ -623,7 +626,7 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>

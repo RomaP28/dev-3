@@ -282,7 +282,7 @@ a.logo img {
 }
 .moving_bg {
   z-index: 0;
-  width: 140%;
+  width: 135%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -292,6 +292,7 @@ a.logo img {
 .moving_bg div {
   display: block;
   text-align: center;
+  width: calc(100vw / 3.37);
 }
 .moving_bg div.up {
   transform: translateY(-250px);
@@ -299,19 +300,17 @@ a.logo img {
 .moving_bg div.down {
   transform: translateY(-110px);
 }
+.moving_bg div.up2 {
+  transform: translateY(150px);
+}
 .moving_bg div.down2 {
   transform: translateY(150px);
 }
 .moving_bg img {
-  width: 47.5rem;
-  height: 25.7rem;
-  margin: 0 0 7rem 0;
+  width: 100%;
+  margin: 0 0 10rem 0;
 }
 @media (min-width: 1601px) {
-  .moving_bg img {
-    width: calc(100vw / 3.37);
-    height: auto;
-  }
 }
 .work-card {
   width: 48%;
@@ -867,31 +866,19 @@ a.logo img {
   width: 100%;
   min-height: 90rem;
   height: 100vh;
-  background: rgba(37, 20, 64, 0.2);
+  background: linear-gradient(90.84deg, rgba(159, 131, 214, 0.5) 19.94%, rgba(190, 149, 203, 0.5) 73.55%, rgba(174, 112, 176, 0.5) 107.91%);
   overflow: hidden;
   position: relative;
-}
-.header:before {
-  position: absolute;
-  background: linear-gradient(90.84deg, rgba(159, 131, 214, 0.5) 19.94%, rgba(190, 149, 203, 0.5) 73.55%, rgba(174, 112, 176, 0.5) 107.91%);
-  filter: blur(250px);
-  top: 0;
-  left: 0;
-  content: "";
-  width: 100%;
-  height: 100%;
 }
 .header .wrapper {
   z-index: 1;
   position: absolute;
-  top: 50%;
+  top: calc((100% + 8rem) / 2);
   left: 50%;
   width: calc(100vw - 30px);
   max-width: 132rem;
   transform: translate(-50%, -50%);
-  background: rgba(255, 255, 255, 0.7);
-  -webkit-backdrop-filter: blur(20px);
-  backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.8);
   border-radius: 50px;
   padding: 10.06rem 8.5rem;
 }
@@ -1047,9 +1034,7 @@ a.logo img {
   position: absolute;
   top: 0;
   left: 0;
-  background: rgba(255, 255, 255, 0.7);
-  -webkit-backdrop-filter: blur(2rem);
-  backdrop-filter: blur(2rem);
+  background: rgba(255, 255, 255, 0.8);
   z-index: 100;
   padding: 0 1.5rem;
 }

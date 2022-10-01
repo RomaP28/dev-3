@@ -2,36 +2,41 @@
   width: 100%;
   min-height: 90rem;
   height: 100vh;
-  background: rgba(37, 20, 64, 0.2);
+  //background: rgba(37, 20, 64, 0.2);
+  background: linear-gradient(
+          90.84deg,
+          rgba(159, 131, 214, 0.5) 19.94%,
+          rgba(190, 149, 203, 0.5) 73.55%,
+          rgba(174, 112, 176, 0.5) 107.91%);
   overflow: hidden;
   position: relative;
-
-  &:before {
-    position: absolute;
-    background: linear-gradient(
-            90.84deg,
-            rgba(159, 131, 214, 0.5) 19.94%,
-            rgba(190, 149, 203, 0.5) 73.55%,
-            rgba(174, 112, 176, 0.5) 107.91%);
-    filter: blur(250px);
-    top: 0;
-    left: 0;
-    content: "";
-    width: 100%;
-    height: 100%;
-  }
+  //
+  //&:before {
+  //  position: absolute;
+  //  background: linear-gradient(
+  //          90.84deg,
+  //          rgba(159, 131, 214, 0.5) 19.94%,
+  //          rgba(190, 149, 203, 0.5) 73.55%,
+  //          rgba(174, 112, 176, 0.5) 107.91%);
+  //  filter: blur(250px);
+  //  top: 0;
+  //  left: 0;
+  //  content: "";
+  //  width: 100%;
+  //  height: 100%;
+  //}
 
   .wrapper {
     z-index: 1;
     position: absolute;
-    top: 50%;
+    top: calc((100% + 8rem) / 2);
     left: 50%;
     width: calc(100vw - 30px);
     max-width: 132rem;
     transform: translate(-50%,-50%);
-    background: rgba(255, 255, 255, 0.7);
-    -webkit-backdrop-filter: blur(20px);
-    backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0.8);
+    //-webkit-backdrop-filter: blur(20px);
+    //backdrop-filter: blur(20px);
     border-radius: 50px;
     padding: 10.06rem 8.5rem;
   }
@@ -119,3 +124,4 @@
     }
   }
 }
+
