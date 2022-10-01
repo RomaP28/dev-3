@@ -11,13 +11,33 @@
     display: flex;
     justify-content: space-between;
 
+    div:first-child h2{
+      margin-top: 5rem;
+    }
+
+    div p:first-of-type{
+      margin-top: 2rem;
+    }
+
+    .icons {
+      margin-top: 2rem;
+
+      a:not(:last-child){
+        margin-right: 2rem;
+      }
+    }
+
+
     &-bottom{
       padding: 1rem 0;
       align-items: center;
     }
   }
 
+
+
    h2 {
+     text-transform: uppercase;
      color: @color-text-grey;
      font-weight: 400;
      font-size: @small-font-size;
@@ -86,9 +106,18 @@
 .followus {
   display: flex;
   align-items: center;
+
+  h2{
+    margin-right: 2rem;
+  }
+
   img{
     display: block;
     width: 2.5rem;
     height: 2.5rem;
+  }
+
+  a:not(:last-child){
+    margin-right: 2rem;
   }
 }

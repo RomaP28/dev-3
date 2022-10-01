@@ -1,15 +1,25 @@
 .form{
+  margin-top: 7.5rem;
   width: 100%;
 
   .row{
     display: flex;
     column-gap: 5rem;
+
+    & + .group{
+      margin-top: 5rem;
+      & + .group{
+        margin-top: 7.5rem;
+      }
+    }
   }
 
   .group{
     width: 100%;
     position: relative;
   }
+
+
 
   input{
     width: 100%;
@@ -62,5 +72,9 @@
     display: inline;
     top: -2rem;
     left: 0;
+  }
+
+  .btn {
+    margin-top: 7.5rem;
   }
 }
