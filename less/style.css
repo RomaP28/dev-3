@@ -178,7 +178,7 @@ a.logo img {
   font-weight: 700;
   line-height: 2.2rem;
   font-size: 1.8rem;
-  letter-spacing: 0.07em;
+  letter-spacing: 0.03em;
 }
 .h-secondary a:link,
 .h-secondary a:visited {
@@ -1174,6 +1174,9 @@ a.logo img {
 }
 .rewards .h-primary {
   text-transform: uppercase;
+}
+.rewards .h-secondary {
+  letter-spacing: 0.07em;
 }
 .brands {
   padding: 8rem 0;
