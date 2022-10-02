@@ -15,9 +15,9 @@ document.querySelectorAll('.nav li a').forEach(elem=>elem.addEventListener('clic
 
 gsap.registerPlugin(ScrollTrigger);
 
-const bgToAnimate = [{selector: '.up', position: -350},
-    { selector: '.down', position: 160},
-    {selector: '.up2', position: -150},
+const bgToAnimate = [{selector: '.up', position: -450},
+    { selector: '.down', position: -10},
+    {selector: '.up2', position: 0},
     { selector: '.down2', position: 250}]
 
 bgToAnimate.forEach(el => gsap.to(el.selector, {
