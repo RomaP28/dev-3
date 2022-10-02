@@ -35,10 +35,7 @@
     max-width: 132rem;
     transform: translate(-50%,-50%);
     background: rgba(255, 255, 255, 0.92);
-    //background: url(../img/blur.png);
-    //-webkit-backdrop-filter: blur(20px);
-    //backdrop-filter: blur(20px);
-    border-radius: 50px;
+    border-radius: 5rem;
     padding: 10.06rem 8.5rem;
   }
 
@@ -122,6 +119,23 @@
         font-size: 7rem;
 
       }
+    }
+  }
+}
+
+@media(max-width: 1200px){
+  .header {
+    .title {
+      font-weight: 700;
+      font-size: 4.5rem;
+      line-height: 5.6rem;
+      .cursor {
+        font-size: 5rem;
+      }
+    }
+    .wrapper {
+      top: calc((100% + 7rem) / 2);
+      padding: 4.3rem 5.5rem;
     }
   }
 }
