@@ -1,6 +1,5 @@
 .footer{
   width: 100%;
-
   background: @color-bg-dark;
 
   .container{
@@ -11,7 +10,7 @@
     display: flex;
     justify-content: space-between;
 
-    div:first-child h2{
+    .contacts{
       margin-top: 5rem;
     }
 
@@ -34,9 +33,7 @@
     }
   }
 
-
-
-   h2 {
+  h2 {
      text-transform: uppercase;
      color: @color-text-grey;
      font-weight: 400;
@@ -127,6 +124,83 @@
     .container {
       padding-left: 1.5rem;
       padding-right: 1.5rem;
+    }
+  }
+}
+
+@media(max-width: 1200px){
+  .footer {
+    position: relative;
+    .logo{
+      width: 153px;
+      height: 25px;
+    }
+    .container {
+      padding-top: 19rem;
+      div:first-child{
+        position: absolute;
+        top: 6rem;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+      }
+      .contacts{
+        margin-top: 3.6rem;
+        display: flex;
+        align-items: center;
+        vertical-align: middle;
+
+        h2{
+          margin-right: 2rem;
+          margin-bottom: 7px;
+        }
+      }
+
+      .icons {
+        margin-top: 0;
+        //
+        //a:not(:last-child){
+        //  margin-right: 2rem;
+        //}
+      }
+
+      &-bottom{
+        padding: 1rem 1.5rem;
+      }
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      line-height: 1.8rem;
+    }
+
+    p {
+      a{
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+      }
+      //&:not(:last-child):not(.copyright) {
+      //  margin-bottom: 1rem;
+      //}
+    }
+  }
+
+  .followus {
+    display: flex;
+    align-items: center;
+
+    h2{
+      margin-right: 2rem;
+    }
+
+    img{
+      display: block;
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+
+    a:not(:last-child){
+      margin-right: 2rem;
     }
   }
 }

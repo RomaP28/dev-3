@@ -1,5 +1,11 @@
+.nav:first-of-type{
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+
 .h-primary,
-.paragraph:not(.paragraph.user-name):not(.work .paragraph){
+.paragraph:not(.paragraph.user-name){
   opacity: 0;
   transform: translateY(200px);
 }
@@ -8,16 +14,16 @@
 .work-card {
   opacity: 0;
   &:nth-child(1) {
-    transform: translate(-100%, 50%);
+    transform: translate(-100%, 30%);
   }
   &:nth-child(2) {
-    transform: translate(100%, 50%);
+    transform: translate(100%, 30%);
   }
   &:nth-child(3) {
-    transform: translate(-100%, 50%);
+    transform: translate(-100%, 30%);
   }
   &:nth-child(4) {
-    transform: translate(100%, 50%);
+    transform: translate(100%, 30%);
   }
 }
 
@@ -32,7 +38,7 @@
     }
   }
 }
-
+.form,
 .cap-card{
   opacity: 0;
 }

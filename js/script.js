@@ -129,6 +129,14 @@ const startType = () => {
     masterTl.add(tl);
 }
 
+gsap.to('.nav:first-of-type', {
+    y: 0,
+    opacity: 1,
+    duration: 1,
+    scrollTrigger: {
+        trigger: '.header',
+    }
+});
 
 gsap.to('.sticky', {
     y: 0,
@@ -145,7 +153,7 @@ gsap.to('.sticky', {
 
 const elementsToAnimate = [
     {selector: '.work .h-primary', trigger: '.work', position: 'top 70%', effect: 'back'},
-    // {selector: '.work .paragraph', trigger: '.work .paragraph', position: 'bottom 80%', effect: 'circ'},
+    {selector: '.work .paragraph', trigger: '.work .paragraph', position: 'top 100%', effect: 'circ'},
     {selector: '.rewards .h-primary', trigger: '.rewards', position: 'top 70%', effect: 'back'},
     {selector: '.rewards .paragraph', trigger: '.rewards', position: 'top 60%', effect: 'circ'},
     {selector: '.capabilities .h-primary', trigger: '.capabilities', position: 'top 70%', effect: 'back'},
@@ -188,7 +196,6 @@ workCardsToAnimate.forEach(el => gsap.to(el.selector, {
     ease: el.effect,
     repeat: 0,
     scrollTrigger: {
-        // markers: true,
         trigger: el.trigger,
         start: el.position,
         end: 'top -100%',
@@ -204,7 +211,7 @@ const rewardsCardsToAnimate = [
 rewardsCardsToAnimate.forEach(el => gsap.to(el.selector, {
     x: 0,
     opacity: 1,
-    duration: 0.4,
+    duration: 0.6,
     ease: el.effect,
     repeat: 0,
     scrollTrigger: {
@@ -271,45 +278,6 @@ document.querySelectorAll('.approach .line').forEach(el=>{
     });
 })
 
-
-// const skillsToAnimate = [{selector: '.sub-title', position: -450},
-//     { selector: '.down', position: -10},
-//     {selector: '.up2', position: 0},
-//     { selector: '.down2', position: 250}]
-//
-// gsap.to('.anim', {
-//     x: 0,
-//     duration: 1,
-//     scrollTrigger: {
-//         markers: true,
-//         trigger: '.approach',
-//         start: 'top 50%',
-//         end: 'top -20%',
-//         scrub: true,
-//         toggleActions: "restart none none none"
-//     }
-// });
-
-
-
-
-// const approachToAnimate = [{selector: '.up', position: -450},
-//     { selector: '.down', position: -10},
-//     {selector: '.up2', position: 0},
-//     { selector: '.down2', position: 250}]
-//
-// approachToAnimate.forEach(el => gsap.to(el.selector, {
-//     y: el.position,
-//     duration: 1,
-//     scrollTrigger: {
-//         trigger: '.work',
-//         start: 10,
-//         end: 'top 0%',
-//         scrub: .3,
-//         toggleActions: "restart none none none"
-//     }
-// }));
-
 const swiper = new Swiper('.swiper', {
     loop: true,
     speed: 1000,
@@ -326,3 +294,17 @@ const swiper = new Swiper('.swiper', {
 document.querySelectorAll('.progress-card').forEach(el => el.addEventListener('click', ev => {
     window.location.href = el.querySelector('.title a').href;
 }))
+
+
+gsap.to('.form', {
+    opacity: 1,
+    duration: 1,
+    scrollTrigger: {
+        // markers: true,
+        trigger: '.contact-us',
+        start: 'top 10%',
+        end: 'bottom 30%',
+        // scrub: true,
+        toggleActions: "restart reverse restart reverse"
+    }
+});
