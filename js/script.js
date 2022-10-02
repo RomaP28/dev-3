@@ -1,9 +1,3 @@
-// const scroll = new LocomotiveScroll({
-//     el: document.querySelector('[data-scroll-container]'),
-//     smooth: true
-// });
-
-
 const header = document.querySelector('.header');
 const headerHeight = header.getBoundingClientRect().height
 
@@ -127,7 +121,6 @@ function typingEffect() {
 }
 
 const startType = () => {
-    console.log('asd')
     const rever = () => masterTl.timeScale(4);
     const start = () => masterTl.timeScale(1)
     let masterTl = gsap.timeline({repeat: -1, yoyo: true, repeatDelay: 3});
@@ -175,10 +168,147 @@ elementsToAnimate.forEach(el => gsap.to(el.selector, {
         // markers: true,
         trigger: el.trigger,
         start: el.position,
-        end: 'top -30%',
+        end: 'top -50%',
         toggleActions: "restart reverse play reverse",
     }
 }));
+
+const workCardsToAnimate = [
+    {selector: '.work-card:nth-child(1)', trigger: '.work', position: 'top 30%', effect: 'expo'},
+    {selector: '.work-card:nth-child(2)', trigger: '.work', position: 'top 30%', effect: 'expo'},
+    {selector: '.work-card:nth-child(3)', trigger: '.work-card:nth-child(1)', position: 'top 10%', effect: 'expo'},
+    {selector: '.work-card:nth-child(4)', trigger: '.work-card:nth-child(2)', position: 'top 10%', effect: 'expo'},
+]
+
+workCardsToAnimate.forEach(el => gsap.to(el.selector, {
+    x: 0,
+    y: 0,
+    opacity: 1,
+    duration: 0.7,
+    ease: el.effect,
+    repeat: 0,
+    scrollTrigger: {
+        // markers: true,
+        trigger: el.trigger,
+        start: el.position,
+        end: 'top -100%',
+        toggleActions: "restart reverse play reverse",
+    }
+}));
+
+const rewardsCardsToAnimate = [
+    {selector: '.progress .row:nth-child(1)', trigger: '.rewards', position: 'top 30%', effect: 'back'},
+    {selector: '.progress .row:nth-child(2)', trigger: '.rewards', position: 'top 10%', effect: 'back'},
+]
+
+rewardsCardsToAnimate.forEach(el => gsap.to(el.selector, {
+    x: 0,
+    opacity: 1,
+    duration: 0.4,
+    ease: el.effect,
+    repeat: 0,
+    scrollTrigger: {
+        // markers: true,
+        trigger: el.trigger,
+        start: el.position,
+        end: 'bottom 50%',
+        toggleActions: "restart reverse play reverse",
+    }
+}));
+
+
+
+function mosaicAnimation(opacity) {
+    const capCards = document.querySelectorAll(".cap-card");
+    const timeObj = {};
+    for(let i=0; i<capCards.length; i++){
+        timeObj[i] = setTimeout( ()=>actionCard(i, timeObj, opacity),i * 150)
+    }
+    const actionCard = (num, timeObj, opacity) => {
+        capCards[num].style.opacity = opacity;
+        clearTimeout(timeObj[num]);
+    }
+}
+
+gsap.to('.capabilities', {
+    onStart: () => mosaicAnimation(1),
+    scrollTrigger: {
+        // markers: true,
+        trigger: '.capabilities',
+        start: 'top 10%',
+        end: 'bottom 50%',
+        toggleActions: "restart none restart none",
+    }
+})
+
+gsap.to('.capabilities .card-container', {
+    onStart: () => mosaicAnimation(0),
+    scrollTrigger: {
+        trigger: '.capabilities .card-container',
+        start: 'top 90%',
+        end: 'bottom 10%',
+        toggleActions: "play restart play restart",
+    }
+})
+
+
+document.querySelectorAll('.approach .line').forEach(el=>{
+    const dur = Math.random() * 5 + 1;
+
+    el.style.width = 0;
+
+    gsap.to(el, {
+        width: '100%',
+        duration: dur,
+        scrollTrigger: {
+            // markers: true,
+            trigger: '.approach',
+            start: 'top 10%',
+            end: 'bottom 30%',
+            // scrub: true,
+            toggleActions: "restart reverse restart reverse"
+        }
+    });
+})
+
+
+// const skillsToAnimate = [{selector: '.sub-title', position: -450},
+//     { selector: '.down', position: -10},
+//     {selector: '.up2', position: 0},
+//     { selector: '.down2', position: 250}]
+//
+// gsap.to('.anim', {
+//     x: 0,
+//     duration: 1,
+//     scrollTrigger: {
+//         markers: true,
+//         trigger: '.approach',
+//         start: 'top 50%',
+//         end: 'top -20%',
+//         scrub: true,
+//         toggleActions: "restart none none none"
+//     }
+// });
+
+
+
+
+// const approachToAnimate = [{selector: '.up', position: -450},
+//     { selector: '.down', position: -10},
+//     {selector: '.up2', position: 0},
+//     { selector: '.down2', position: 250}]
+//
+// approachToAnimate.forEach(el => gsap.to(el.selector, {
+//     y: el.position,
+//     duration: 1,
+//     scrollTrigger: {
+//         trigger: '.work',
+//         start: 10,
+//         end: 'top 0%',
+//         scrub: .3,
+//         toggleActions: "restart none none none"
+//     }
+// }));
 
 const swiper = new Swiper('.swiper', {
     loop: true,

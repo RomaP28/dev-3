@@ -3,3 +3,36 @@
   opacity: 0;
   transform: translateY(200px);
 }
+
+
+.work-card {
+  opacity: 0;
+  &:nth-child(1) {
+    transform: translate(-100%, 50%);
+  }
+  &:nth-child(2) {
+    transform: translate(100%, 50%);
+  }
+  &:nth-child(3) {
+    transform: translate(-100%, 50%);
+  }
+  &:nth-child(4) {
+    transform: translate(100%, 50%);
+  }
+}
+
+.progress {
+  .row{
+    opacity: 0;
+    &:nth-child(1) {
+      transform: translateX(-100%);
+    }
+    &:nth-child(2) {
+      transform: translateX(100%);
+    }
+  }
+}
+
+.cap-card{
+  opacity: 0;
+}

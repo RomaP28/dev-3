@@ -2,6 +2,7 @@
 .capabilities,
 .reviews,
 .contact-us {
+  overflow: hidden;
   background: @color-white;
   padding: 15rem 1.5rem;
   .container{
@@ -37,6 +38,7 @@
 .rewards,
 .approach,
 .brands{
+  overflow: hidden;
   background: @color-bg-grey;
   padding: 15rem 1.5rem;
   .container{
@@ -78,6 +80,13 @@
     .card-container{
       margin-top: 5rem;
     }
+  }
+
+  .reviews .swiper,
+  .capabilities .btn,
+  .work .paragraph + .btn,
+  .approach .row:first-of-type{
+    margin-top: 5rem;
   }
 
   .work .card-container{
